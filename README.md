@@ -127,7 +127,7 @@ $ python generate-trees.py
 
 Configure the following input variables inside the code:
 
-- **datapath**: The original dataset folder (download from [here](https://figshare.com/articles/PHEME_dataset_of_rumours_and_non-rumours/4010619)) 
+- **datapath**: The original dataset folder (download from [here](https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078)) 
 - **feature_path**: File containing input feature vectors for all tweets in the dataset. The file contains two tab-separated columns - tweet_id, features
 - **output_path**: Path of the folder where you want the generated trees to be stored
 
@@ -171,7 +171,7 @@ $ python generate-trees.py
 
 Configure the following input variables inside the code:
 
-- **datapath**: The original dataset folder (download from [here](https://figshare.com/articles/PHEME_dataset_of_rumours_and_non-rumours/4010619)) 
+- **datapath**: The original dataset folder (download from [here](https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078)) 
 - **feature_path**: File containing input feature vectors for all tweets in the dataset. The file contains two tab-separated columns - tweet_id, features
 - **output_path**: Path of the folder where you want the generated trees to be stored
 - **stance_path**: Path of the folder where stance.json is available
