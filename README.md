@@ -2,19 +2,12 @@
 
 # Verified Summarization
 
-If this code is helpful in your research, please cite the following publication
-
-> Ashish Sharma, Koustav Rudra, and Niloy Ganguly. "Going Beyond Content Richness: Verified Information Aware Summarization of Crisis-Related Microblogs." Proceedings of the 28th ACM International Conference on Information and Knowledge Management. ACM CIKM, 2019.
-
 
 ## Initial Steps
 
 ### Dataset
 
-- We use the dataset created by Zubiaga et al, 2017 which can be downloaded from [here](https://figshare.com/articles/PHEME_dataset_of_rumours_and_non-rumours/4010619). 
-
-
-Edit:  Dataset can be downloaded from: 
+- We use the dataset PHEME-RNR 9 which can be downloaded from [here](https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078)
 
 ### POS TAGGING
 
@@ -74,6 +67,8 @@ K:    Number of Content Word Topics
 T:    Number of Expression Word Topics
 iter: Number of iterations to run the model for
 ```
+        
+Default in the upcoming codes:  K=30 | T = 10 | iter = 1000
 
 Configure the following input variables inside the code:
 
@@ -170,7 +165,43 @@ Configure the following input variables inside the code:
 - **BATCH_SIZE**: Batch size for training
 - **test_set**: Disaster events on which you want to test.
 
+        
+```
+$ python generate-trees.py
+```
 
-## VERISUMM
+Configure the following input variables inside the code:
 
-Code coming up soon!!
+- **datapath**: The original dataset folder (download from [here](https://figshare.com/articles/PHEME_dataset_of_rumours_and_non-rumours/4010619)) 
+- **feature_path**: File containing input feature vectors for all tweets in the dataset. The file contains two tab-separated columns - tweet_id, features
+- **output_path**: Path of the folder where you want the generated trees to be stored
+- **stance_path**: Path of the folder where stance.json is available
+
+Each tree is stored as a dictionary. A sample tree and the corresponding stored dictionary is shown below:
+
+![Tree-Example](Tree-Ex.png?raw=true "Tree_Example") 
+
+```
+tree = {
+        'f': [0.234, .... , ], 'l': [0, 1], 'stance' = [1,0,0,0], 'c': [
+            {'f': [0.109, ... , ], 'l': [0, 1],'stance' = [0,1,0,0], 'c': []},
+            {'f': [0.712, ... , ], 'l': [0, 1],'stance' = [0,0,1,0], 'c': [
+                {'f': [0.352, ... , ], 'l': [0, 1], 'stance' = [0,0,0,1],'c': []}
+            ]},
+        ],
+    }
+```
+        
+```
+Parsed-trees
+```
+Contains all the trees without stance generated from the Corpus.txt provided in the CTP folder
+        
+        
+```
+Parsed-trees_stance
+```
+Contains all the trees with stance generated from the Corpus.txt provided in the CTP folder
+
+        
+
