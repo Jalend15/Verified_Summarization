@@ -1,6 +1,5 @@
 # Verified_Summarization
 
-# Verified Summarization
 
 
 ## Initial Steps
@@ -192,15 +191,15 @@ tree = {
     }
 ```
         
-```
-Parsed-trees
-```
+
+### Parsed-trees
+
 Contains all the trees without stance generated from the Corpus.txt provided in the CTP folder
         
         
-```
-Parsed-trees_stance
-```
+
+### Parsed-trees_stance
+
 Contains all the trees with stance generated from the Corpus.txt provided in the CTP folder
 
         
