@@ -133,7 +133,7 @@ Configure the following input variables inside the code:
 
 Each tree is stored as a dictionary. A sample tree and the corresponding stored dictionary is shown below:
 
-![Tree-Example](Tree-Ex.png?raw=true "Tree_Example") 
+
 
 ```
 tree = {
@@ -178,7 +178,6 @@ Configure the following input variables inside the code:
 
 Each tree is stored as a dictionary. A sample tree and the corresponding stored dictionary is shown below:
 
-![Tree-Example](Tree-Ex.png?raw=true "Tree_Example") 
 
 ```
 tree = {
